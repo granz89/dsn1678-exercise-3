@@ -1,23 +1,35 @@
-var theHeader = $('.the-header');
-var theButton = $('.the-button');
 
-/*
-	Functions are reusable pieces of code
-	They're basically code stored inside variables
-*/
+var info1 = $('.info1');
 
-var buttonClickHandler = function () {
-	var isActive = theHeader.attr('data-state');
+var show1 = $('.show1');
+	
+var buttonClickHandler = function() {
+	var isActive = info1.attr('data-state');
 
 	if (isActive == 'active') {
-		theHeader.attr('data-state', 'inactive');
-
+	info1.attr('data-state', 'inactive');	
 	} else {
-	  theHeader.attr('data-state', 'active');
-
-
+	info1.attr('data-state', 'active');
 	}
 
 };
 
-theButton.on('click', buttonClickHandler);
+show1.on('click', buttonClickHandler);
+
+
+var info2 = $('.info2');
+
+var show2 = $('.show2');
+	
+var buttonClickHandler2 = function() {
+	var isActive = info2.attr('data-state');
+
+	if (isActive == 'active') {
+	info2.attr('data-state', 'inactive');	
+	} else {
+	info2.attr('data-state', 'active');
+	}
+
+};
+
+show2.on('click', buttonClickHandler2);
